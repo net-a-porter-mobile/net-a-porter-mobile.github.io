@@ -27,7 +27,7 @@ GameManager.prototype.pollHighScores = function(){
   var self = this;
   var getHighScoreIntervalLong = window.setInterval(function(){
       self.getHighScore();
-  }, 20000);
+  }, 60000);
 }
 
 GameManager.prototype.submitHighscore = function(name){
