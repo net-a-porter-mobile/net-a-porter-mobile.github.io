@@ -75,6 +75,7 @@ h1.title {
   margin: 10px 0;
   display: block;
   color: $text-color;
+  text-align: right;
   text-shadow: -1px 2px 12px rgba(0, 0, 0, 0.24);
 }
 
@@ -237,6 +238,18 @@ li{
   display: block;
   float: right;
 }
+
+.powered-by{
+  background-color: rgba($text-color, .7);
+  width: $field-width;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.powered-by-image{
+  max-width: 100%;
+}
+
 
 @include keyframes(fade-in) {
   0% {
@@ -689,5 +702,9 @@ li{
     position: static;
     width: $field-width;  
     margin: $game-container-margin-top auto 0;
+  }
+
+  .powered-by{
+    width: $field-width;
   }
 }
