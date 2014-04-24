@@ -60,7 +60,7 @@ body {
 
 /* line 72, main.scss */
 h1.title {
-  font-size: 80px;
+  font-size: 70px;
   font-weight: bold;
   margin: 10px 0;
   display: block;
@@ -1257,29 +1257,30 @@ li {
 
   /* line 652, main.scss */
   h1.title {
+    float: left;
     font-size: 27px;
     margin-top: 15px;
   }
 
-  /* line 657, main.scss */
+  /* line 658, main.scss */
   .container {
     width: 280px;
     margin: 0 auto;
   }
 
-  /* line 662, main.scss */
+  /* line 663, main.scss */
   .score-container, .best-container {
     margin-top: 0;
     padding: 15px 10px;
     min-width: 40px;
   }
 
-  /* line 668, main.scss */
+  /* line 669, main.scss */
   .heading {
     margin-bottom: 10px;
   }
 
-  /* line 672, main.scss */
+  /* line 673, main.scss */
   .restart-button {
     width: 42%;
     padding: 0;
@@ -1511,31 +1512,31 @@ li {
     transform: translate(202px, 202px);
   }
 
-  /* line 684, main.scss */
+  /* line 685, main.scss */
   .tile .tile-inner {
     font-size: 35px;
   }
 
-  /* line 689, main.scss */
+  /* line 690, main.scss */
   .game-message p {
     font-size: 30px !important;
     height: 30px !important;
     line-height: 30px !important;
     margin-top: 90px !important;
   }
-  /* line 696, main.scss */
+  /* line 697, main.scss */
   .game-message .lower {
     margin-top: 30px !important;
   }
 
-  /* line 701, main.scss */
+  /* line 702, main.scss */
   .highscore-container {
     position: static;
     width: 280px;
     margin: 17px auto 0;
   }
 
-  /* line 707, main.scss */
+  /* line 708, main.scss */
   .powered-by {
     width: 280px;
   }
