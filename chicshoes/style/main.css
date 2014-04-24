@@ -1,0 +1,1523 @@
+@import url(fonts/clear-sans.css);
+/* line 24, main.scss */
+#clay, div[style] {
+  display: none !important;
+}
+
+/* line 28, main.scss */
+.is-hidden {
+  display: none;
+}
+
+/* line 32, main.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: white;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+}
+
+/* line 41, main.scss */
+body {
+  padding: 80px 0;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+/* line 48, main.scss */
+.background-1 {
+  background-image: url(https://lh4.googleusercontent.com/-9Wr1ysJnXyA/Uo9OY1R3OMI/AAAAAAAAMhY/Rr0EB82tud4/w996-h746-no/e4bce734-0000-495f-b0c8-153a0f2a7d57);
+}
+
+/* line 52, main.scss */
+.background-2 {
+  background-image: url(https://lh3.googleusercontent.com/-eO_BAYbXHy0/UorbX0xXztI/AAAAAAAAMbc/K2d4A3V9Cw0/w996-h746-no/b3eef427-f1c1-40cc-bbd5-a33212ab9a79);
+}
+
+/* line 56, main.scss */
+.background-3 {
+  background-image: url(https://lh3.googleusercontent.com/-DjTY8R0oGdI/UtbVIVF_WeI/AAAAAAAANvI/CRs1ByBKjvU/w996-h746-no/Tropical-Prints_Google%252BPost_996X746_RD_V1.jpg);
+}
+
+/* line 60, main.scss */
+.background-4 {
+  background-image: url(https://lh3.googleusercontent.com/-YmAZijxxLx8/UsqlhoXYwPI/AAAAAAAANdc/gl6urA6jC4c/s600-no/1.jpg);
+}
+
+/* line 64, main.scss */
+.background-5 {
+  background-image: url(https://lh6.googleusercontent.com/-kIjBTdvg4AU/Up8brhARmbI/AAAAAAAAM20/AhWs8P6WtZ4/s690-no/295a9225-037f-4bd5-ad6a-dd1b7fb01ede);
+}
+
+/* line 76, helpers.scss */
+.heading:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 72, main.scss */
+h1.title {
+  font-size: 80px;
+  font-weight: bold;
+  margin: 10px 0;
+  display: block;
+  color: white;
+  text-shadow: -1px 2px 12px rgba(0, 0, 0, 0.24);
+}
+
+@-webkit-keyframes move-up {
+  /* line 82, main.scss */
+  0% {
+    top: 25px;
+    opacity: 1;
+  }
+
+  /* line 87, main.scss */
+  100% {
+    top: -50px;
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes move-up {
+  /* line 82, main.scss */
+  0% {
+    top: 25px;
+    opacity: 1;
+  }
+
+  /* line 87, main.scss */
+  100% {
+    top: -50px;
+    opacity: 0;
+  }
+}
+
+@keyframes move-up {
+  /* line 82, main.scss */
+  0% {
+    top: 25px;
+    opacity: 1;
+  }
+
+  /* line 87, main.scss */
+  100% {
+    top: -50px;
+    opacity: 0;
+  }
+}
+
+/* line 93, main.scss */
+.scores-container {
+  text-align: right;
+}
+
+/* line 97, main.scss */
+.score-container, .best-container {
+  position: relative;
+  display: inline-block;
+  background: black;
+  padding: 15px 25px;
+  font-size: 25px;
+  height: 25px;
+  line-height: 47px;
+  font-weight: bold;
+  color: white;
+  margin-top: 8px;
+  text-align: center;
+}
+/* line 112, main.scss */
+.score-container:after, .best-container:after {
+  position: absolute;
+  width: 100%;
+  top: 10px;
+  left: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 13px;
+  text-align: center;
+  color: white;
+}
+/* line 124, main.scss */
+.score-container .score-addition, .best-container .score-addition {
+  position: absolute;
+  right: 30px;
+  color: red;
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  -webkit-animation: move-up 600ms ease-in;
+  -moz-animation: move-up 600ms ease-in;
+  animation: move-up 600ms ease-in;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 138, main.scss */
+.score-container:after {
+  content: "Score";
+}
+
+/* line 142, main.scss */
+.best-container:after {
+  content: "Best";
+}
+
+/* line 146, main.scss */
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.65;
+  background-color: #000;
+  padding: 10px;
+}
+
+/* line 154, main.scss */
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* line 162, main.scss */
+strong.important {
+  text-transform: uppercase;
+}
+
+/* line 167, main.scss */
+hr {
+  border: none;
+  border-bottom: 1px solid white;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* line 174, main.scss */
+ol {
+  padding-left: 0;
+}
+
+/* line 178, main.scss */
+li {
+  list-style-position: inside;
+}
+
+/* line 182, main.scss */
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* line 187, main.scss */
+.highscore-container {
+  color: black;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  min-height: 200px;
+  box-sizing: border-box;
+  width: 250px;
+  overflow: hidden;
+}
+/* line 198, main.scss */
+.highscore-container h2 {
+  padding: 10px;
+  margin: 0;
+}
+/* line 202, main.scss */
+.highscore-container p {
+  padding: 0;
+  background-color: transparent;
+  padding: 10px;
+}
+/* line 207, main.scss */
+.highscore-container ol {
+  padding: 10px;
+}
+/* line 210, main.scss */
+.highscore-container li {
+  transition: color 4s ease;
+  list-style: none;
+}
+/* line 214, main.scss */
+.highscore-container.loading ol {
+  display: none;
+}
+/* line 218, main.scss */
+.highscore-container:not(.loading) p {
+  display: none;
+}
+
+/* line 224, main.scss */
+.is-new-player {
+  color: gold;
+}
+
+/* line 228, main.scss */
+.highscore-name {
+  display: block;
+  width: 160px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  float: left;
+  white-space: nowrap;
+}
+
+/* line 236, main.scss */
+.highscore-points {
+  display: block;
+  float: right;
+}
+
+@-webkit-keyframes fade-in {
+  /* line 242, main.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 246, main.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in {
+  /* line 242, main.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 246, main.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  /* line 242, main.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 246, main.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 264, main.scss */
+.game-container {
+  margin-top: 40px;
+  position: relative;
+  padding: 15px;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -ms-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  background: rgba(0, 0, 0, 0.9);
+  width: 500px;
+  height: 500px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 287, main.scss */
+.game-container .game-message {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 100;
+  text-align: center;
+  -webkit-animation: fade-in 800ms ease 1200ms;
+  -moz-animation: fade-in 800ms ease 1200ms;
+  animation: fade-in 800ms ease 1200ms;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/* line 300, main.scss */
+.game-container .game-message p {
+  font-size: 60px;
+  font-weight: bold;
+  height: 60px;
+  line-height: 60px;
+  margin-top: 140px;
+}
+/* line 310, main.scss */
+.game-container .game-message .lower {
+  display: block;
+  margin-top: 59px;
+}
+/* line 315, main.scss */
+.game-container .game-message a {
+  display: inline-block;
+  background: black;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #f9f6f2;
+  height: 42px;
+  line-height: 42px;
+  margin-left: 9px;
+}
+/* line 320, main.scss */
+.game-container .game-message a.keep-playing-button {
+  display: none;
+}
+/* line 328, main.scss */
+.game-container .game-message.game-won {
+  background: rgba(237, 194, 46, 0.5);
+  color: #f9f6f2;
+}
+/* line 332, main.scss */
+.game-container .game-message.game-won a.keep-playing-button {
+  display: inline-block;
+}
+/* line 337, main.scss */
+.game-container .game-message.game-won, .game-container .game-message.game-over {
+  display: block;
+}
+
+/* line 343, main.scss */
+.grid-container {
+  position: absolute;
+  z-index: 1;
+}
+
+/* line 348, main.scss */
+.grid-row {
+  margin-bottom: 15px;
+}
+/* line 351, main.scss */
+.grid-row:last-child {
+  margin-bottom: 0;
+}
+/* line 355, main.scss */
+.grid-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 362, main.scss */
+.grid-cell {
+  width: 106.25px;
+  height: 106.25px;
+  margin-right: 15px;
+  float: left;
+  background: rgba(255, 255, 255, 0.35);
+}
+/* line 369, main.scss */
+.grid-cell:last-child {
+  margin-right: 0;
+}
+
+/* line 374, main.scss */
+.tile-container {
+  position: absolute;
+  z-index: 2;
+}
+
+/* line 380, main.scss */
+.tile, .tile .tile-inner {
+  width: 107px;
+  height: 107px;
+  line-height: 116.25px;
+}
+/* line 389, main.scss */
+.tile.tile-position-1-1 {
+  -webkit-transform: translate(0px, 0px);
+  -moz-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+}
+/* line 389, main.scss */
+.tile.tile-position-1-2 {
+  -webkit-transform: translate(0px, 121px);
+  -moz-transform: translate(0px, 121px);
+  transform: translate(0px, 121px);
+}
+/* line 389, main.scss */
+.tile.tile-position-1-3 {
+  -webkit-transform: translate(0px, 242px);
+  -moz-transform: translate(0px, 242px);
+  transform: translate(0px, 242px);
+}
+/* line 389, main.scss */
+.tile.tile-position-1-4 {
+  -webkit-transform: translate(0px, 363px);
+  -moz-transform: translate(0px, 363px);
+  transform: translate(0px, 363px);
+}
+/* line 389, main.scss */
+.tile.tile-position-2-1 {
+  -webkit-transform: translate(121px, 0px);
+  -moz-transform: translate(121px, 0px);
+  transform: translate(121px, 0px);
+}
+/* line 389, main.scss */
+.tile.tile-position-2-2 {
+  -webkit-transform: translate(121px, 121px);
+  -moz-transform: translate(121px, 121px);
+  transform: translate(121px, 121px);
+}
+/* line 389, main.scss */
+.tile.tile-position-2-3 {
+  -webkit-transform: translate(121px, 242px);
+  -moz-transform: translate(121px, 242px);
+  transform: translate(121px, 242px);
+}
+/* line 389, main.scss */
+.tile.tile-position-2-4 {
+  -webkit-transform: translate(121px, 363px);
+  -moz-transform: translate(121px, 363px);
+  transform: translate(121px, 363px);
+}
+/* line 389, main.scss */
+.tile.tile-position-3-1 {
+  -webkit-transform: translate(242px, 0px);
+  -moz-transform: translate(242px, 0px);
+  transform: translate(242px, 0px);
+}
+/* line 389, main.scss */
+.tile.tile-position-3-2 {
+  -webkit-transform: translate(242px, 121px);
+  -moz-transform: translate(242px, 121px);
+  transform: translate(242px, 121px);
+}
+/* line 389, main.scss */
+.tile.tile-position-3-3 {
+  -webkit-transform: translate(242px, 242px);
+  -moz-transform: translate(242px, 242px);
+  transform: translate(242px, 242px);
+}
+/* line 389, main.scss */
+.tile.tile-position-3-4 {
+  -webkit-transform: translate(242px, 363px);
+  -moz-transform: translate(242px, 363px);
+  transform: translate(242px, 363px);
+}
+/* line 389, main.scss */
+.tile.tile-position-4-1 {
+  -webkit-transform: translate(363px, 0px);
+  -moz-transform: translate(363px, 0px);
+  transform: translate(363px, 0px);
+}
+/* line 389, main.scss */
+.tile.tile-position-4-2 {
+  -webkit-transform: translate(363px, 121px);
+  -moz-transform: translate(363px, 121px);
+  transform: translate(363px, 121px);
+}
+/* line 389, main.scss */
+.tile.tile-position-4-3 {
+  -webkit-transform: translate(363px, 242px);
+  -moz-transform: translate(363px, 242px);
+  transform: translate(363px, 242px);
+}
+/* line 389, main.scss */
+.tile.tile-position-4-4 {
+  -webkit-transform: translate(363px, 363px);
+  -moz-transform: translate(363px, 363px);
+  transform: translate(363px, 363px);
+}
+
+/* line 402, main.scss */
+.tile {
+  position: absolute;
+  -webkit-transition: 100ms ease-in-out;
+  -moz-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+}
+/* line 405, main.scss */
+.tile .tile-inner {
+  background: white;
+  text-align: center;
+  font-weight: bold;
+  z-index: 10;
+  background-position: center;
+  background-size: 100% auto;
+  font-size: 55px;
+  color: transparent;
+}
+/* line 414, main.scss */
+.tile .tile-inner a {
+  text-decoration: none;
+  display: block;
+  color: transparent;
+  height: 100%;
+  width: 100%;
+  background-size: 100% auto;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px black;
+}
+/* line 473, main.scss */
+.tile.tile-2 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/472194/472194_fr_m.jpg");
+  background-position: 0 center;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+}
+/* line 515, main.scss */
+.tile.tile-2 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/472194/472194_fr_m.jpg");
+  background-position: 0 center;
+}
+/* line 518, main.scss */
+.tile.tile-2 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-2 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-2 .tile-inner {
+    background-position-y: center;
+  }
+  /* line 529, main.scss */
+  .tile.tile-2 .tile-inner a {
+    background-position: 0 center;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-4 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/429928/429928_fr_m.jpg");
+  background-position: 0 center;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+}
+/* line 515, main.scss */
+.tile.tile-4 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/429928/429928_fr_m.jpg");
+  background-position: 0 center;
+}
+/* line 518, main.scss */
+.tile.tile-4 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-4 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-4 .tile-inner {
+    background-position-y: center;
+  }
+  /* line 529, main.scss */
+  .tile.tile-4 .tile-inner a {
+    background-position: 0 center;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-8 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/402072/402072_fr_m.jpg");
+  background-position: 0 -52px;
+}
+/* line 515, main.scss */
+.tile.tile-8 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/402072/402072_fr_m.jpg");
+  background-position: 0 -52px;
+}
+/* line 518, main.scss */
+.tile.tile-8 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-8 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-8 .tile-inner {
+    background-position-y: -25px;
+  }
+  /* line 529, main.scss */
+  .tile.tile-8 .tile-inner a {
+    background-position: 0 -25px;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-16 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/401460/401460_fr_m.jpg");
+  background-position: 0 -40px;
+}
+/* line 515, main.scss */
+.tile.tile-16 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/401460/401460_fr_m.jpg");
+  background-position: 0 -40px;
+}
+/* line 518, main.scss */
+.tile.tile-16 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-16 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-16 .tile-inner {
+    background-position-y: -27px;
+  }
+  /* line 529, main.scss */
+  .tile.tile-16 .tile-inner a {
+    background-position: 0 -27px;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-32 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/432031/432031_fr_m.jpg");
+  background-position: 0 -27px;
+}
+/* line 515, main.scss */
+.tile.tile-32 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/432031/432031_fr_m.jpg");
+  background-position: 0 -27px;
+}
+/* line 518, main.scss */
+.tile.tile-32 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-32 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-32 .tile-inner {
+    background-position-y: -14px;
+  }
+  /* line 529, main.scss */
+  .tile.tile-32 .tile-inner a {
+    background-position: 0 -14px;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-64 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/401716/401716_fr_m.jpg");
+  background-position: 0 -40px;
+}
+/* line 515, main.scss */
+.tile.tile-64 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/401716/401716_fr_m.jpg");
+  background-position: 0 -40px;
+}
+/* line 518, main.scss */
+.tile.tile-64 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-64 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-64 .tile-inner {
+    background-position-y: -27px;
+  }
+  /* line 529, main.scss */
+  .tile.tile-64 .tile-inner a {
+    background-position: 0 -27px;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-128 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/432066/432066_fr_m.jpg");
+  background-position: 0 -42px;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.18519), inset 0 0 0 1px rgba(255, 255, 255, 0.11111);
+  font-size: 45px;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-128 .tile-inner {
+    font-size: 25px;
+  }
+}
+/* line 515, main.scss */
+.tile.tile-128 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/432066/432066_fr_m.jpg");
+  background-position: 0 -42px;
+}
+/* line 518, main.scss */
+.tile.tile-128 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-128 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-128 .tile-inner {
+    background-position-y: -29px;
+  }
+  /* line 529, main.scss */
+  .tile.tile-128 .tile-inner a {
+    background-position: 0 -29px;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-256 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/384889/384889_fr_m.jpg");
+  background-position: 0 -49px;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.24691), inset 0 0 0 1px rgba(255, 255, 255, 0.14815);
+  font-size: 45px;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-256 .tile-inner {
+    font-size: 25px;
+  }
+}
+/* line 515, main.scss */
+.tile.tile-256 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/384889/384889_fr_m.jpg");
+  background-position: 0 -49px;
+}
+/* line 518, main.scss */
+.tile.tile-256 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-256 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-256 .tile-inner {
+    background-position-y: -36px;
+  }
+  /* line 529, main.scss */
+  .tile.tile-256 .tile-inner a {
+    background-position: 0 -36px;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-512 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/418163/418163_fr_m.jpg");
+  background-position: 0 -43px;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.30864), inset 0 0 0 1px rgba(255, 255, 255, 0.18519);
+  font-size: 45px;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-512 .tile-inner {
+    font-size: 25px;
+  }
+}
+/* line 515, main.scss */
+.tile.tile-512 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/418163/418163_fr_m.jpg");
+  background-position: 0 -43px;
+}
+/* line 518, main.scss */
+.tile.tile-512 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-512 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-512 .tile-inner {
+    background-position-y: -30px;
+  }
+  /* line 529, main.scss */
+  .tile.tile-512 .tile-inner a {
+    background-position: 0 -30px;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-1024 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/413486/413486_fr_m.jpg");
+  background-position: 0 -47px;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.37037), inset 0 0 0 1px rgba(255, 255, 255, 0.22222);
+  font-size: 35px;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-1024 .tile-inner {
+    font-size: 15px;
+  }
+}
+/* line 515, main.scss */
+.tile.tile-1024 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/413486/413486_fr_m.jpg");
+  background-position: 0 -47px;
+}
+/* line 518, main.scss */
+.tile.tile-1024 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-1024 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-1024 .tile-inner {
+    background-position-y: -34px;
+  }
+  /* line 529, main.scss */
+  .tile.tile-1024 .tile-inner a {
+    background-position: 0 -34px;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-2048 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/435285/435285_fr_m.jpg");
+  background-position: 0 -50px;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.4321), inset 0 0 0 1px rgba(255, 255, 255, 0.25926);
+  font-size: 35px;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-2048 .tile-inner {
+    font-size: 15px;
+  }
+}
+/* line 515, main.scss */
+.tile.tile-2048 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/435285/435285_fr_m.jpg");
+  background-position: 0 -50px;
+}
+/* line 518, main.scss */
+.tile.tile-2048 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-2048 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-2048 .tile-inner {
+    background-position-y: -37px;
+  }
+  /* line 529, main.scss */
+  .tile.tile-2048 .tile-inner a {
+    background-position: 0 -37px;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-4096 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/429927/429927_fr_m.jpg");
+  background-position: 0 -33px;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.49383), inset 0 0 0 1px rgba(255, 255, 255, 0.2963);
+  font-size: 35px;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-4096 .tile-inner {
+    font-size: 15px;
+  }
+}
+/* line 515, main.scss */
+.tile.tile-4096 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/429927/429927_fr_m.jpg");
+  background-position: 0 -33px;
+}
+/* line 518, main.scss */
+.tile.tile-4096 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-4096 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-4096 .tile-inner {
+    background-position-y: -18px;
+  }
+  /* line 529, main.scss */
+  .tile.tile-4096 .tile-inner a {
+    background-position: 0 -18px;
+  }
+}
+/* line 473, main.scss */
+.tile.tile-8192 .tile-inner {
+  background-image: url("http://cache.net-a-porter.com/images/products/411622/411622_fr_m.jpg");
+  background-position: 0 -50px;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+  font-size: 35px;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-8192 .tile-inner {
+    font-size: 15px;
+  }
+}
+/* line 515, main.scss */
+.tile.tile-8192 .tile-inner a {
+  background-image: url("http://cache.net-a-porter.com/images/products/411622/411622_fr_m.jpg");
+  background-position: 0 -50px;
+}
+/* line 518, main.scss */
+.tile.tile-8192 .tile-inner a:hover {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 524, main.scss */
+.tile.tile-8192 .tile-inner:hover {
+  background-image: none;
+}
+@media screen and (max-width: 1000px) {
+  /* line 473, main.scss */
+  .tile.tile-8192 .tile-inner {
+    background-position-y: -29px;
+  }
+  /* line 529, main.scss */
+  .tile.tile-8192 .tile-inner a {
+    background-position: 0 -29px;
+  }
+}
+/* line 539, main.scss */
+.tile.tile-super .tile-inner {
+  color: #f9f6f2;
+  background: #3c3a32;
+  font-size: 30px;
+}
+@media screen and (max-width: 1000px) {
+  /* line 539, main.scss */
+  .tile.tile-super .tile-inner {
+    font-size: 10px;
+  }
+}
+
+@-webkit-keyframes appear {
+  /* line 552, main.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+  }
+
+  /* line 557, main.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes appear {
+  /* line 552, main.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+  }
+
+  /* line 557, main.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes appear {
+  /* line 552, main.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+  }
+
+  /* line 557, main.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* line 563, main.scss */
+.tile-new .tile-inner {
+  -webkit-animation: appear 200ms ease 100ms;
+  -moz-animation: appear 200ms ease 100ms;
+  animation: appear 200ms ease 100ms;
+  -webkit-animation-fill-mode: backwards;
+  -moz-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+
+@-webkit-keyframes pop {
+  /* line 569, main.scss */
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+  }
+
+  /* line 573, main.scss */
+  50% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  /* line 577, main.scss */
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes pop {
+  /* line 569, main.scss */
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+  }
+
+  /* line 573, main.scss */
+  50% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  /* line 577, main.scss */
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  /* line 569, main.scss */
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+  }
+
+  /* line 573, main.scss */
+  50% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  /* line 577, main.scss */
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* line 582, main.scss */
+.tile-merged .tile-inner {
+  z-index: 20;
+  -webkit-animation: pop 200ms ease 100ms;
+  -moz-animation: pop 200ms ease 100ms;
+  animation: pop 200ms ease 100ms;
+  -webkit-animation-fill-mode: backwards;
+  -moz-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+
+/* line 76, helpers.scss */
+.above-game:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 592, main.scss */
+.restart-button {
+  display: inline-block;
+  background: black;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #f9f6f2;
+  height: 42px;
+  line-height: 42px;
+  display: block;
+  text-align: center;
+  float: right;
+}
+
+/* line 599, main.scss */
+.game-explanation {
+  margin-top: 50px;
+}
+
+/* line 603, main.scss */
+.submit-button {
+  display: inline-block;
+  background: black;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #f9f6f2;
+  height: 42px;
+  line-height: 42px;
+  border: none;
+}
+/* line 606, main.scss */
+.submit-button[disabled] {
+  opacity: 0.5;
+}
+
+/* line 611, main.scss */
+.submit-container-field {
+  width: 200px;
+  padding: 14px;
+  border: none;
+  margin: 0 5px;
+}
+
+/* line 618, main.scss */
+.submit-container-title {
+  color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  /* line 630, main.scss */
+  html, body {
+    font-size: 15px;
+  }
+
+  /* line 634, main.scss */
+  body {
+    padding: 20px;
+    background-position: center;
+  }
+
+  /* line 639, main.scss */
+  h1.title {
+    font-size: 27px;
+    margin-top: 15px;
+  }
+
+  /* line 644, main.scss */
+  .container {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  /* line 649, main.scss */
+  .score-container, .best-container {
+    margin-top: 0;
+    padding: 15px 10px;
+    min-width: 40px;
+  }
+
+  /* line 655, main.scss */
+  .heading {
+    margin-bottom: 10px;
+  }
+
+  /* line 659, main.scss */
+  .restart-button {
+    width: 42%;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 2px;
+  }
+
+  /* line 264, main.scss */
+  .game-container {
+    margin-top: 17px;
+    position: relative;
+    padding: 10px;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -ms-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -ms-touch-action: none;
+    touch-action: none;
+    background: rgba(0, 0, 0, 0.9);
+    width: 280px;
+    height: 280px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* line 287, main.scss */
+  .game-container .game-message {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 100;
+    text-align: center;
+    -webkit-animation: fade-in 800ms ease 1200ms;
+    -moz-animation: fade-in 800ms ease 1200ms;
+    animation: fade-in 800ms ease 1200ms;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  /* line 300, main.scss */
+  .game-container .game-message p {
+    font-size: 60px;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 140px;
+  }
+  /* line 310, main.scss */
+  .game-container .game-message .lower {
+    display: block;
+    margin-top: 59px;
+  }
+  /* line 315, main.scss */
+  .game-container .game-message a {
+    display: inline-block;
+    background: black;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #f9f6f2;
+    height: 42px;
+    line-height: 42px;
+    margin-left: 9px;
+  }
+  /* line 320, main.scss */
+  .game-container .game-message a.keep-playing-button {
+    display: none;
+  }
+  /* line 328, main.scss */
+  .game-container .game-message.game-won {
+    background: rgba(237, 194, 46, 0.5);
+    color: #f9f6f2;
+  }
+  /* line 332, main.scss */
+  .game-container .game-message.game-won a.keep-playing-button {
+    display: inline-block;
+  }
+  /* line 337, main.scss */
+  .game-container .game-message.game-won, .game-container .game-message.game-over {
+    display: block;
+  }
+
+  /* line 343, main.scss */
+  .grid-container {
+    position: absolute;
+    z-index: 1;
+  }
+
+  /* line 348, main.scss */
+  .grid-row {
+    margin-bottom: 10px;
+  }
+  /* line 351, main.scss */
+  .grid-row:last-child {
+    margin-bottom: 0;
+  }
+  /* line 355, main.scss */
+  .grid-row:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /* line 362, main.scss */
+  .grid-cell {
+    width: 57.5px;
+    height: 57.5px;
+    margin-right: 10px;
+    float: left;
+    background: rgba(255, 255, 255, 0.35);
+  }
+  /* line 369, main.scss */
+  .grid-cell:last-child {
+    margin-right: 0;
+  }
+
+  /* line 374, main.scss */
+  .tile-container {
+    position: absolute;
+    z-index: 2;
+  }
+
+  /* line 380, main.scss */
+  .tile, .tile .tile-inner {
+    width: 58px;
+    height: 58px;
+    line-height: 67.5px;
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-1-1 {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-1-2 {
+    -webkit-transform: translate(0px, 67px);
+    -moz-transform: translate(0px, 67px);
+    transform: translate(0px, 67px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-1-3 {
+    -webkit-transform: translate(0px, 135px);
+    -moz-transform: translate(0px, 135px);
+    transform: translate(0px, 135px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-1-4 {
+    -webkit-transform: translate(0px, 202px);
+    -moz-transform: translate(0px, 202px);
+    transform: translate(0px, 202px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-2-1 {
+    -webkit-transform: translate(67px, 0px);
+    -moz-transform: translate(67px, 0px);
+    transform: translate(67px, 0px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-2-2 {
+    -webkit-transform: translate(67px, 67px);
+    -moz-transform: translate(67px, 67px);
+    transform: translate(67px, 67px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-2-3 {
+    -webkit-transform: translate(67px, 135px);
+    -moz-transform: translate(67px, 135px);
+    transform: translate(67px, 135px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-2-4 {
+    -webkit-transform: translate(67px, 202px);
+    -moz-transform: translate(67px, 202px);
+    transform: translate(67px, 202px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-3-1 {
+    -webkit-transform: translate(135px, 0px);
+    -moz-transform: translate(135px, 0px);
+    transform: translate(135px, 0px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-3-2 {
+    -webkit-transform: translate(135px, 67px);
+    -moz-transform: translate(135px, 67px);
+    transform: translate(135px, 67px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-3-3 {
+    -webkit-transform: translate(135px, 135px);
+    -moz-transform: translate(135px, 135px);
+    transform: translate(135px, 135px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-3-4 {
+    -webkit-transform: translate(135px, 202px);
+    -moz-transform: translate(135px, 202px);
+    transform: translate(135px, 202px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-4-1 {
+    -webkit-transform: translate(202px, 0px);
+    -moz-transform: translate(202px, 0px);
+    transform: translate(202px, 0px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-4-2 {
+    -webkit-transform: translate(202px, 67px);
+    -moz-transform: translate(202px, 67px);
+    transform: translate(202px, 67px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-4-3 {
+    -webkit-transform: translate(202px, 135px);
+    -moz-transform: translate(202px, 135px);
+    transform: translate(202px, 135px);
+  }
+  /* line 389, main.scss */
+  .tile.tile-position-4-4 {
+    -webkit-transform: translate(202px, 202px);
+    -moz-transform: translate(202px, 202px);
+    transform: translate(202px, 202px);
+  }
+
+  /* line 671, main.scss */
+  .tile .tile-inner {
+    font-size: 35px;
+  }
+
+  /* line 676, main.scss */
+  .game-message p {
+    font-size: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+    margin-top: 90px !important;
+  }
+  /* line 683, main.scss */
+  .game-message .lower {
+    margin-top: 30px !important;
+  }
+
+  /* line 688, main.scss */
+  .highscore-container {
+    position: static;
+    width: 280px;
+    margin: 17px auto 0;
+  }
+}

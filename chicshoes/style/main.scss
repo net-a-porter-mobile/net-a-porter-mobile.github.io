@@ -1,0 +1,693 @@
+@import "helpers";
+@import "fonts/clear-sans.css";
+
+$field-width: 500px;
+$grid-spacing: 15px;
+$grid-row-cells: 4;
+$tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
+
+$mobile-threshold: $field-width * 2;
+
+$text-color: #ffffff;
+$bright-text-color: #f9f6f2;
+
+$tile-color: #ffffff;
+$tile-gold-color: #edc22e;
+$tile-gold-glow-color: lighten($tile-gold-color, 15%);
+
+$game-container-margin-top: 40px;
+$game-container-background: #000000;
+
+$transition-speed: 100ms;
+
+//hide anything Clay injects
+#clay, div[style]{
+  display: none !important;
+}
+
+.is-hidden{
+  display: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: $text-color;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+}
+
+body {
+  padding: 80px 0;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+
+.background-1{
+  background-image: url(https://lh4.googleusercontent.com/-9Wr1ysJnXyA/Uo9OY1R3OMI/AAAAAAAAMhY/Rr0EB82tud4/w996-h746-no/e4bce734-0000-495f-b0c8-153a0f2a7d57)
+}
+
+.background-2{
+  background-image: url(https://lh3.googleusercontent.com/-eO_BAYbXHy0/UorbX0xXztI/AAAAAAAAMbc/K2d4A3V9Cw0/w996-h746-no/b3eef427-f1c1-40cc-bbd5-a33212ab9a79);
+}
+
+.background-3{
+  background-image: url(https://lh3.googleusercontent.com/-DjTY8R0oGdI/UtbVIVF_WeI/AAAAAAAANvI/CRs1ByBKjvU/w996-h746-no/Tropical-Prints_Google%252BPost_996X746_RD_V1.jpg)
+}
+
+.background-4{
+  background-image: url(https://lh3.googleusercontent.com/-YmAZijxxLx8/UsqlhoXYwPI/AAAAAAAANdc/gl6urA6jC4c/s600-no/1.jpg)
+}
+
+.background-5{
+  background-image: url(https://lh6.googleusercontent.com/-kIjBTdvg4AU/Up8brhARmbI/AAAAAAAAM20/AhWs8P6WtZ4/s690-no/295a9225-037f-4bd5-ad6a-dd1b7fb01ede)
+}
+
+.heading {
+  @include clearfix;
+}
+
+h1.title {
+  font-size: 80px;
+  font-weight: bold;
+  margin: 10px 0;
+  display: block;
+  color: $text-color;
+  text-shadow: -1px 2px 12px rgba(0, 0, 0, 0.24);
+}
+
+@include keyframes(move-up) {
+  0% {
+    top: 25px;
+    opacity: 1;
+  }
+
+  100% {
+    top: -50px;
+    opacity: 0;
+  }
+}
+
+.scores-container {
+  text-align: right;
+}
+
+.score-container, .best-container {
+  $height: 25px;
+
+  position: relative;
+  display: inline-block;
+  background: $game-container-background;
+  padding: 15px 25px;
+  font-size: $height;
+  height: $height;
+  line-height: $height + 22px;
+  font-weight: bold;
+  color: white;
+  margin-top: 8px;
+  text-align: center;
+
+  &:after {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: $tile-color;
+  }
+
+  .score-addition {
+    position: absolute;
+    right: 30px;
+    color: red;
+    font-size: $height;
+    line-height: $height;
+    font-weight: bold;
+    color: rgba($text-color, .9);
+    z-index: 100;
+    @include animation(move-up 600ms ease-in);
+    @include animation-fill-mode(both);
+  }
+}
+
+.score-container:after {
+  content: "Score";
+}
+
+.best-container:after {
+  content: "Best"
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.65;
+  background-color: #000;
+  padding: 10px;
+}
+
+a {
+  color: $text-color;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+strong {
+  &.important {
+    text-transform: uppercase;
+  }
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid lighten($text-color, 40%);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+ol{
+  padding-left: 0;
+}
+
+li{
+  list-style-position: inside;
+}
+
+.container {
+  width: $field-width;
+  margin: 0 auto;
+}
+
+.highscore-container {
+  color: $game-container-background;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 10px 0;
+  background-color: rgba($text-color, .7);
+  min-height: 200px;
+  box-sizing: border-box;
+  width: $field-width / 2;
+  overflow: hidden;
+  h2{
+    padding: 10px;
+    margin: 0;
+  }
+  p{
+    padding: 0;
+    background-color: transparent;
+    padding: 10px;
+  }
+  ol{
+    padding: 10px;
+  }
+  li{
+    transition: color 4s ease;
+    list-style: none;
+  }
+  &.loading ol{
+    display: none;
+  }
+  &:not(.loading) {
+    p{
+      display: none;
+    }
+  }
+}
+
+.is-new-player{
+  color: gold;  
+}
+
+.highscore-name{
+  display: block;
+  width: 160px;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  float: left;
+  white-space: nowrap;
+}
+.highscore-points{
+  display: block;
+  float: right;
+}
+
+@include keyframes(fade-in) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// Styles for buttons
+@mixin button {
+  display: inline-block;
+  background: darken($game-container-background, 20%);
+  padding: 0 20px;
+  text-decoration: none;
+  color: $bright-text-color;
+  height: 42px;
+  line-height: 42px;
+}
+
+// Game field mixin used to render CSS at different width
+@mixin game-field {
+  .game-container {
+    margin-top: $game-container-margin-top;
+    position: relative;
+    padding: $grid-spacing;
+
+    cursor: default;
+    -webkit-touch-callout: none;
+    -ms-touch-callout: none;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    -ms-touch-action: none;
+    touch-action: none;
+
+    background: rgba($game-container-background, .9);
+    width: $field-width;
+    height: $field-width;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    .game-message {
+      display: none;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba($tile-color, .95);
+      z-index: 100;
+
+      text-align: center;
+
+      p {
+        font-size: 60px;
+        font-weight: bold;
+        height: 60px;
+        line-height: 60px;
+        margin-top: 140px;
+        // height: $field-width;
+        // line-height: $field-width;
+      }
+
+      .lower {
+        display: block;
+        margin-top: 59px;
+      }
+
+      a {
+        @include button;
+        margin-left: 9px;
+        // margin-top: 59px;
+
+	&.keep-playing-button {
+	  display: none;
+	}
+      }
+
+      @include animation(fade-in 800ms ease $transition-speed * 12);
+      @include animation-fill-mode(both);
+
+      &.game-won {
+        background: rgba($tile-gold-color, .5);
+        color: $bright-text-color;
+
+	a.keep-playing-button {
+	  display: inline-block;
+	}
+      }
+
+      &.game-won, &.game-over {
+        display: block;
+      }
+    }
+  }
+
+  .grid-container {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .grid-row {
+    margin-bottom: $grid-spacing;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+  .grid-cell {
+    width: $tile-size;
+    height: $tile-size;
+    margin-right: $grid-spacing;
+    float: left;
+    background: rgba($tile-color, .35);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .tile-container {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .tile {
+    &, .tile-inner {
+      width: ceil($tile-size);
+      height: ceil($tile-size);
+      line-height: $tile-size + 10px;
+    }
+
+    // Build position classes
+    @for $x from 1 through $grid-row-cells {
+      @for $y from 1 through $grid-row-cells {
+        &.tile-position-#{$x}-#{$y} {
+          $xPos: floor(($tile-size + $grid-spacing) * ($x - 1));
+          $yPos: floor(($tile-size + $grid-spacing) * ($y - 1));
+          @include transform(translate($xPos, $yPos));
+        }
+      }
+    }
+  }
+}
+
+// End of game-field mixin
+@include game-field;
+
+.tile {
+  position: absolute; // Makes transforms relative to the top-left corner
+
+  .tile-inner {
+    background: $text-color;
+    text-align: center;
+    font-weight: bold;
+    z-index: 10;
+    background-position: center;
+    background-size: 100% auto;
+    font-size: 55px;
+    color: transparent;
+    a{
+      text-decoration: none;
+      display: block;
+      color: transparent;
+      height: 100%;
+      width: 100%;
+      background-size: 100% auto;
+      -webkit-background-clip: text;  
+      -webkit-text-stroke: 1px $game-container-background;
+    }
+  }
+
+  // Movement transition
+  @include transition($transition-speed ease-in-out);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+
+  $base: 2;
+  $exponent: 1;
+  $limit: 13;
+
+
+  // Colors for all 11 states, false = no special color
+  $special-colors: false false, // 2
+                   false false, // 4
+                   #f78e48 true, // 8
+                   #fc5e2e true, // 16
+                   #ff3333 true, // 32
+                   #ff0000 true, // 64
+                   false true, // 128
+                   false true, // 256
+                   false true, // 512
+                   false true, // 1024
+                   false true, // 2048
+                   false true, // 4096
+                   false true; // 8192
+
+  // Background images for all 11 states, px  background Y position, px  background Y position for small screens
+  $bg-images: 'http://cache.net-a-porter.com/images/products/472194/472194_fr_m.jpg' center center,
+              'http://cache.net-a-porter.com/images/products/429928/429928_fr_m.jpg' center center,
+              'http://cache.net-a-porter.com/images/products/402072/402072_fr_m.jpg' -52px -25px,
+              'http://cache.net-a-porter.com/images/products/401460/401460_fr_m.jpg' -40px -27px,
+              'http://cache.net-a-porter.com/images/products/432031/432031_fr_m.jpg' -27px -14px,
+              'http://cache.net-a-porter.com/images/products/401716/401716_fr_m.jpg' -40px -27px,
+              'http://cache.net-a-porter.com/images/products/432066/432066_fr_m.jpg' -42px -29px,
+              'http://cache.net-a-porter.com/images/products/384889/384889_fr_m.jpg' -49px -36px,
+              'http://cache.net-a-porter.com/images/products/418163/418163_fr_m.jpg' -43px -30px,
+              'http://cache.net-a-porter.com/images/products/413486/413486_fr_m.jpg' -47px -34px,
+              'http://cache.net-a-porter.com/images/products/435285/435285_fr_m.jpg' -50px -37px,
+              'http://cache.net-a-porter.com/images/products/429927/429927_fr_m.jpg' -33px -18px,
+              'http://cache.net-a-porter.com/images/products/411622/411622_fr_m.jpg' -50px -29px;
+
+
+
+  // Build tile colors
+  @while $exponent <= $limit {
+    $power: pow($base, $exponent);
+
+    &.tile-#{$power} .tile-inner {
+      // Calculate base background color
+      $gold-percent: ($exponent - 1) / ($limit - 1) * 100;
+      $mixed-background: mix($tile-gold-color, $tile-color, $gold-percent);
+
+      $nth-color: nth($special-colors, $exponent);
+
+      $special-background: nth($nth-color, 1);
+
+      @if $special-background {
+        $mixed-background: mix($special-background, $mixed-background, 55%);
+      }
+
+      $bg-image: nth($bg-images, $exponent);
+
+      // Set background
+      background-image: url(nth($bg-image, 1));
+      background-position:0 nth($bg-image, 2);
+
+      // Add glow
+      $glow-opacity: max($exponent - 4, 0) / ($limit - 4);
+
+      @if not $special-background {
+        box-shadow: 0 0 30px 10px rgba($tile-gold-glow-color, $glow-opacity / 1.8),
+                    inset 0 0 0 1px rgba(white, $glow-opacity / 3);
+      }
+
+      // Adjust font size for bigger numbers
+      @if $power >= 100 and $power < 1000 {
+        font-size: 45px;
+
+        // Media queries placed here to avoid carrying over the rest of the logic
+        @include smaller($mobile-threshold) {
+          font-size: 25px;
+        }
+      } @else if $power >= 1000 {
+        font-size: 35px;
+
+        @include smaller($mobile-threshold) {
+          font-size: 15px;
+        }
+      }
+      a{
+        background-image: url(nth($bg-image, 1));
+        background-position:0 nth($bg-image, 2);
+        &:hover{
+          color: $text-color;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text; 
+        }             
+      }
+      &:hover{
+        background-image: none;
+      }
+      @include smaller($mobile-threshold) {
+        background-position-y: nth($bg-image, 3);
+        a{
+          background-position:0 nth($bg-image, 3);           
+        }
+      }
+    }
+
+    $exponent: $exponent + 1;
+  }
+
+  // Super tiles (above 8192)
+  &.tile-super .tile-inner {
+    color: $bright-text-color;
+    background: mix(#333, $tile-gold-color, 95%);
+
+    font-size: 30px;
+
+    @include smaller($mobile-threshold) {
+      font-size: 10px;
+    }
+  }
+}
+
+@include keyframes(appear) {
+  0% {
+    opacity: 0;
+    @include transform(scale(0));
+  }
+
+  100% {
+    opacity: 1;
+    @include transform(scale(1));
+  }
+}
+
+.tile-new .tile-inner {
+  @include animation(appear 200ms ease $transition-speed);
+  @include animation-fill-mode(backwards);
+}
+
+@include keyframes(pop) {
+  0% {
+    @include transform(scale(0));
+  }
+
+  50% {
+    @include transform(scale(1.2));
+  }
+
+  100% {
+    @include transform(scale(1));
+  }
+}
+
+.tile-merged .tile-inner {
+  z-index: 20;
+  @include animation(pop 200ms ease $transition-speed);
+  @include animation-fill-mode(backwards);
+}
+
+.above-game {
+  @include clearfix;
+}
+
+.restart-button {
+  @include button;
+  display: block;
+  text-align: center;
+  float: right;
+}
+
+.game-explanation {
+  margin-top: 50px;
+}
+
+.submit-button{
+  @include button;
+  border: none;
+  &[disabled]{
+    opacity: 0.5;
+  }
+}
+
+.submit-container-field{
+  width: 200px;
+  padding: 14px;
+  border: none;
+  margin: 0 5px;
+}
+
+.submit-container-title{
+  color: $game-container-background;
+}
+
+@include smaller($mobile-threshold) {
+  // Redefine variables for smaller screens
+  $field-width: 280px;
+  $grid-spacing: 10px;
+  $grid-row-cells: 4;
+  $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
+  $game-container-margin-top: 17px;
+
+  html, body {
+    font-size: 15px;
+  }
+
+  body {
+    padding: 20px;
+    background-position: center;
+  }
+
+  h1.title {
+    font-size: 27px;
+    margin-top: 15px;
+  }
+
+  .container {
+    width: $field-width;
+    margin: 0 auto;
+  }
+
+  .score-container, .best-container {
+    margin-top: 0;
+    padding: 15px 10px;
+    min-width: 40px;
+  }
+
+  .heading {
+    margin-bottom: 10px;
+  }
+
+  .restart-button {
+    width: 42%;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+    margin-top: 2px;
+  }
+
+  // Render the game field at the right width
+  @include game-field;
+
+  // Rest of the font-size adjustments in the tile class
+  .tile .tile-inner {
+    font-size: 35px;
+  }
+
+  .game-message {
+    p {
+      font-size: 30px !important;
+      height: 30px !important;
+      line-height: 30px !important;
+      margin-top: 90px !important;
+    }
+
+    .lower {
+      margin-top: 30px !important;
+    }
+  }
+
+  .highscore-container{
+    position: static;
+    width: $field-width;  
+    margin: $game-container-margin-top auto 0;
+  }
+}
