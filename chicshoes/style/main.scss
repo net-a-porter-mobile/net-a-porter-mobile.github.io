@@ -136,6 +136,10 @@ h1.title {
   }
 }
 
+.best-container{
+    display: none;
+  }
+
 .score-container:after {
   content: "Score";
 }
@@ -220,6 +224,10 @@ li{
       display: none;
     }
   }
+}
+
+.highscore-container{
+  display: none;
 }
 
 .is-new-player{
@@ -611,6 +619,10 @@ li{
 
 .game-explanation {
   margin-top: 50px;
+}
+
+.submit-container{
+  display: none;
 }
 
 .submit-button{

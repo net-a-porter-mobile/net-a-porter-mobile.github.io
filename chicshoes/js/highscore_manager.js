@@ -11,7 +11,7 @@ function HighscoreManager() {
 
 	Clay.ready(function(){
 		console.log('Clay ready');
-	  	self.leaderboard = new Clay.Leaderboard( { id: 3685 } ); // The 3685 signifies the leaderboard ID.  
+	  	self.leaderboard = new Clay.Leaderboard( { id: 0 } );
 	});
 
 	HighscoreManager.prototype.getLeaderboard = function(){

@@ -13,13 +13,13 @@ function GameManager(size, InputManager, Actuator, StorageManager, HighscoreMana
   this.inputManager.on("keepPlaying", this.keepPlaying.bind(this));
   this.inputManager.on("submitHighscore", this.submitHighscore.bind(this));
 
-  var getHighScoreInterval = window.setInterval(function(){
+  /*var getHighScoreInterval = window.setInterval(function(){
     if(self.highscoreManager.getLeaderboard()) {
       self.getHighScore();
       self.pollHighScores();
       window.clearInterval(getHighScoreInterval);
       }    
-    }, 2000);
+    }, 2000);*/
   this.setup();
 }
 
@@ -31,7 +31,7 @@ GameManager.prototype.pollHighScores = function(){
 }
 
 GameManager.prototype.submitHighscore = function(name){
-  var self = this;
+/*  var self = this;
   self.highscoreManager.submitHighscore(self.score, name)
   .then(function(data){
     self.getHighScore(self.score, name);
@@ -39,7 +39,7 @@ GameManager.prototype.submitHighscore = function(name){
   })
   .fail(function(error){
     self.actuator.highscoreSubmitted(false);
-  })
+  })*/
 }
 
 // Restart the game
